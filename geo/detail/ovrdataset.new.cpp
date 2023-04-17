@@ -153,7 +153,7 @@ protected:
     friend class OverviewDataset;
 
     ::GDALRasterBand *underlyingBand_;
-    virtual ::GDALRasterBand* RefUnderlyingRasterBand() override {
+    virtual ::GDALRasterBand* RefUnderlyingRasterBand() const override {
         return underlyingBand_;
     }
 

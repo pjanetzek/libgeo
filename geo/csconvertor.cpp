@@ -121,7 +121,7 @@ initOgr(const OGRSpatialReference &from, const OptName &fromName
     }
     if(from.IsSame(fromClone.get()) == FALSE)
     {
-        LOG(warn3) << "Dangerous promotion to 3D was necessary for: "
+        LOG(debug) << "Dangerous promotion to 3D was necessary for: "
                    << asName(from, fromName);
     }
     if(toClone->PromoteTo3D(nullptr) != OGRERR_NONE)
